@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,7 +31,24 @@ namespace ImageGallery.Client
                 client.BaseAddress = new Uri("https://localhost:44366/");
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Add(HeaderNames.Accept, "application/json");
-            });             
+            });
+
+            services.AddAuthentication(s =>
+            {
+                s.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                s.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+            })
+            .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, o =>
+            {
+                o.SignInScheme=CookieAuthenticationDefaults.AuthenticationScheme;
+                o.Authority = "https://localhost:5001";
+                o.ClientId = "imagegallery";
+                o.ClientSecret = "secret";
+                o.ResponseType = "code";
+                o.SaveTokens = true;
+                o.GetClaimsFromUserInfoEndpoint= true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,8 +69,9 @@ namespace ImageGallery.Client
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net6.0"
         ],
         "sources": {
           "C:\\Github\\memphis.net\\src\\Memphis.Client\\bin\\Debug": {},
@@ -31,8 +31,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
               "C:\\Github\\SecuringAspNetCore3WithOAuth2AndOIDC\\Starter files\\src\\ImageGallery.Model\\ImageGallery.Model.csproj": {
                 "projectPath": "C:\\Github\\SecuringAspNetCore3WithOAuth2AndOIDC\\Starter files\\src\\ImageGallery.Model\\ImageGallery.Model.csproj"
@@ -47,9 +47,13 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[3.1.0, )"
