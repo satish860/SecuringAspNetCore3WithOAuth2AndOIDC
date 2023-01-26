@@ -44,3 +44,7 @@ C:\Github\SecuringAspNetCore3WithOAuth2AndOIDC\Starter files\src\Marvin.IDP\obj\
 C:\Github\SecuringAspNetCore3WithOAuth2AndOIDC\Starter files\src\Marvin.IDP\obj\Debug\net6.0\Marvin.IDP.pdb
 C:\Github\SecuringAspNetCore3WithOAuth2AndOIDC\Starter files\src\Marvin.IDP\obj\Debug\net6.0\Marvin.IDP.genruntimeconfig.cache
 C:\Github\SecuringAspNetCore3WithOAuth2AndOIDC\Starter files\src\Marvin.IDP\obj\Debug\net6.0\ref\Marvin.IDP.dll
+C:\Github\SecuringAspNetCore3WithOAuth2AndOIDC\Starter files\src\Marvin.IDP\bin\Debug\net6.0\keys\is-signing-key-1F3861FF84CE06901EBAF0C2E9D1D830.json
+C:\Github\SecuringAspNetCore3WithOAuth2AndOIDC\Starter files\src\Marvin.IDP\bin\Debug\net6.0\Marvin.IDP.staticwebassets.runtime.json
+C:\Github\SecuringAspNetCore3WithOAuth2AndOIDC\Starter files\src\Marvin.IDP\obj\Debug\net6.0\Marvin.IDP.RazorAssemblyInfo.cache
+C:\Github\SecuringAspNetCore3WithOAuth2AndOIDC\Starter files\src\Marvin.IDP\obj\Debug\net6.0\Marvin.IDP.RazorAssemblyInfo.cs
